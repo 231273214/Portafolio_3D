@@ -1,0 +1,175 @@
+.assets-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 20, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.assets-container {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  padding: 30px;
+  position: relative;
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+}
+
+.assets-gallery {
+  max-width: 1000px;
+}
+
+.assets-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(145deg, #2a2a40, #1a1a2e);
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.assets-close:hover {
+  transform: scale(1.1) rotate(90deg);
+  background: linear-gradient(145deg, #ff4d6d, #c9184a);
+}
+
+.assets-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.assets-subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.asset-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.asset-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #6b8cff;
+}
+
+.asset-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.asset-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.asset-description {
+  font-size: 13px;
+  opacity: 0.7;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.asset-button {
+  background: linear-gradient(135deg, #4a6fa5, #3a5a8a);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.asset-button:hover {
+  background: linear-gradient(135deg, #5a7fb5, #4a6a9a);
+  transform: scale(1.02);
+}
+
+/* Visor 3D */
+.assets-viewer {
+  margin-top: 10px;
+}
+
+.assets-back {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.assets-back:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.assets-viewer-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.assets-model-container {
+  height: 450px;
+  background: #0a0a14;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.assets-description {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Scrollbar personalizada */
+.assets-container::-webkit-scrollbar {
+  width: 6px;
+}
+.assets-container::-webkit-scrollbar-track {
+  background: #1e1e2e;
+}
+.assets-container::-webkit-scrollbar-thumb {
+  background: #4a6fa5;
+  border-radius: 4px;
+}
