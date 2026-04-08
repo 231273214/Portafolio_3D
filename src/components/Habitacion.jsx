@@ -26,7 +26,7 @@ function getMaterialEmissiveSnapshot(material) {
 }
 
 export default function Habitacion({ onTooltip, onSelectObject }) {
-  const { scene } = useGLTF('/Models/Habitacion.glb')
+  const { scene } = useGLTF('/Portafolio_3D/Models/Habitacion.glb')
   const { camera, gl } = useThree()
 
   const [hoveredGroup, setHoveredGroup] = useState(null)
@@ -356,4 +356,4 @@ export default function Habitacion({ onTooltip, onSelectObject }) {
   return <primitive object={scene} />
 }
 
-useGLTF.preload('/Models/Habitacion.glb')
+useGLTF.preload(`${import.meta.env.BASE_URL}Models/Habitacion.glb`)
